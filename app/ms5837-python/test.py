@@ -70,8 +70,9 @@ while True:
                                         print("Motion detected!")
                                         
                                         # Your IFTTT URL with event name, key and json parameters (values)
-                                        r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
-                                        
+                                        r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV')
+                                        #r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
+
                                         # Record new previous state
                                         previousstate = 1
                                         
