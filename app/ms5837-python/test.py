@@ -51,25 +51,15 @@ while True:
                 #Logica y POST
                 try:
                         print("BANDERA")
-                        
-                        # # Loop until PIR output is 0
-                        # while GPIO.input(pinpir) == 1:
-                        
-                        #         currentstate = 0
 
-                        # print("    Ready")
-                        
-                        # Loop until users quits with CTRL-C
                         while True:
-                        
-                                # Read PIR state
-
+                                # Read  state
+                                print("T: %0.2f C") % (sensor.temperature())
                                 if sensor.temperature() > 30:
                                         currentstate = 1
                                 else: 
                                         currentstate = 0
-
-                                # If the PIR is triggered
+                                # If the bar is triggered
                                 if currentstate == 1 and previousstate == 0:
                                 
                                         print("Motion detected!")
