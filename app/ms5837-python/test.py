@@ -64,7 +64,7 @@ while True:
                         
                                 # Read PIR state
 
-                                if sensor.temperature() > 28:
+                                if sensor.temperature() > 30:
                                         currentstate = 1
                                 else: 
                                         currentstate = 0
