@@ -54,7 +54,12 @@ while True:
 
                         while True:
                                 # Read  state
-                                print("T: %0.2f C") % (sensor.temperature())
+                                if sensor.read():
+                                        print("T: %0.2f C") % (sensor.temperature())
+                                else:
+                                        print("Sensor read failed!")
+                                        exit(1)
+
                                 if sensor.temperature() > 30:
                                         currentstate = 1
                                 else: 
