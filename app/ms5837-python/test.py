@@ -47,6 +47,7 @@ time.sleep(5)
 # Spew readings
 while True:
         if sensor.read():
+                print("T: %0.2f C") % (sensor.temperature())
                 #Logica y POST
                 try:
                         print("BANDERA")
@@ -62,7 +63,6 @@ while True:
                         while True:
                         
                                 # Read PIR state
-                                print("T: %0.2f C") % (sensor.temperature())
 
                                 if sensor.temperature() > 28:
                                         currentstate = 1
