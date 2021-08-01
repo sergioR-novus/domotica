@@ -26,7 +26,8 @@ try:
 	
 	# Loop until PIR output is 0
 	while GPIO.input(pinpir) == 1:
-	
+                print(GPIO.input(pinpir))
+
 		currentstate = 0
 
 	print("    Ready")
@@ -35,8 +36,8 @@ try:
 	while True:
 	
 		# Read PIR state
+        
 		currentstate = GPIO.input(pinpir)
-                print(GPIO.input(pinpir))
 
 		# If the PIR is triggered
 		if currentstate == 1 and previousstate == 0:
