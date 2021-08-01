@@ -6,6 +6,7 @@ GPIO.setup(17, GPIO.IN)         #Read output from PIR motion sensor
 while True:
     i=GPIO.input(17)
     print(i)
+    time.sleep(1)
 if i==0:                 #When output from motion sensor is LOW
     print "No intruders",i
     time.sleep(0.1)
