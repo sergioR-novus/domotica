@@ -53,15 +53,15 @@ try:
 		currentstate = GPIO.input(pinpir)
 		# If the PIR is triggered
 		if currentstate == 1 and previousstate == 0:
-			print("Motion detected!")
-			# Your IFTTT URL with event name, key and json parameters (values)
-			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
-			# Record new previous state
-			previousstate = 1
-                        streamer.log(SENSOR_LOCATION_NAME + " Temperature(C)", True)
-			#Wait 120 seconds before looping again
-			print("Waiting 10 seconds")
-			time.sleep(10)
+                    streamer.log(SENSOR_LOCATION_NAME + " Movimiento", True)
+                    print("Motion detected!")
+                    # Your IFTTT URL with event name, key and json parameters (values)
+                    r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
+                    # Record new previous state
+                    previousstate = 1
+                    #Wait 120 seconds before looping again
+                    print("Waiting 10 seconds")
+                    time.sleep(10)
 		# If the PIR has returned to ready state
 		elif currentstate == 0 and previousstate == 1:
 			print("Ready")
