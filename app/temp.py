@@ -45,6 +45,5 @@ while True:
         else:
                 temp_f = format(temp_c * 9.0 / 5.0 + 32.0, ".2f")
                 streamer.log(SENSOR_LOCATION_NAME + " Temperature(F)", temp_f)
-        humidity = format(humidity,".2f")
         streamer.flush()
         time.sleep(60*MINUTES_BETWEEN_READS)
