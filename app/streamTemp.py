@@ -52,5 +52,5 @@ while True:
         except RuntimeError:
                 print("RuntimeError, trying again...")
                 print("    Quit")
-	        GPIO.cleanup()
+	        # GPIO.cleanup()
                 continue
