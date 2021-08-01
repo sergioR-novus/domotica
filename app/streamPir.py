@@ -44,7 +44,7 @@ try:
 	while GPIO.input(pinpir) == 1:
                 print(GPIO.input(pinpir))
                 time.sleep(1)
-		currentstate = 0
+	        currentstate = 0
 	print("    Ready")
 	# Loop until users quits with CTRL-C
 	while True:
