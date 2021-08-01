@@ -4,9 +4,12 @@ import requests
 from w1thermsensor import W1ThermSensor
 from ISStreamer.Streamer import Streamer
 
-sensor = W1ThermSensor()
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
 pinpir = 17
 GPIO.setup(pinpir, GPIO.IN)
+
+sensor = W1ThermSensor()
 currentstate = 0
 previousstate = 0
 
