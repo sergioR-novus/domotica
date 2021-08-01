@@ -42,10 +42,10 @@ try:
 	
 	# Loop until PIR output is 0
 	while GPIO.input(pinpir) == 1:
-        currentstate = 0
-        print(GPIO.input(pinpir))
-        time.sleep(1)
-         
+            currentstate = 0
+            print(GPIO.input(pinpir))
+            time.sleep(1)
+
 	print("    Ready")
 	# Loop until users quits with CTRL-C
 	while True:
