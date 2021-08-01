@@ -19,7 +19,7 @@ SENSOR_LOCATION_NAME = "Casa"
 BUCKET_NAME = ":partly_sunny: Room stats"
 BUCKET_KEY = "test"
 ACCESS_KEY = "ist_ENpoPBXw1ubY9eAaNld52lkMMLpjKAgS"
-MINUTES_BETWEEN_READS = .05
+MINUTES_BETWEEN_READS = .01
 # ---------------------------------
 
 streamer = Streamer(bucket_name=BUCKET_NAME, bucket_key=BUCKET_KEY, access_key=ACCESS_KEY)
