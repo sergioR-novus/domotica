@@ -5,6 +5,11 @@ import RPi.GPIO as GPIO
 import time
 import requests
 
+
+current_time = time.strftime("%H:%M:%S", time.localtime())
+print(current_time)
+
+
 # Set the GPIO naming convention
 GPIO.setmode(GPIO.BCM)
 
@@ -36,6 +41,7 @@ try:
 	
 	# Loop until users quits with CTRL-C
 	while True:
+
 	
 		# Read PIR state
         
@@ -45,6 +51,7 @@ try:
 		if currentstate == 1 and previousstate == 0:
 		
 			print("Motion detected!")
+            
 			
 			# Your IFTTT URL with event name, key and json parameters (values)
 			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
@@ -52,7 +59,7 @@ try:
 			previousstate = 1
 			
 			#Wait 120 seconds before looping again
-			print("Waiting 120 seconds")
+			print("Waiting 10 seconds")
 			time.sleep(10)
 			
 		# If the PIR has returned to ready state
