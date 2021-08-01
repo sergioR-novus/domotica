@@ -10,6 +10,7 @@ BUCKET_NAME = ":partly_sunny: Room Temperatures"
 BUCKET_KEY = "dht22sensor"
 ACCESS_KEY = "ist_ENpoPBXw1ubY9eAaNld52lkMMLpjKAgS"
 MINUTES_BETWEEN_READS = .05
+METRIC_UNITS = True
 # ---------------------------------
 
 streamer = Streamer(bucket_name=BUCKET_NAME, bucket_key=BUCKET_KEY, access_key=ACCESS_KEY)
