@@ -36,6 +36,7 @@ try:
 	
 		# Read PIR state
 		currentstate = GPIO.input(pinpir)
+                print(GPIO.input(pinpir))
 
 		# If the PIR is triggered
 		if currentstate == 1 and previousstate == 0:
