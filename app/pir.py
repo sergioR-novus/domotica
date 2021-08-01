@@ -17,7 +17,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 # Set a variable to hold the GPIO Pin identity
-pinpir = 4
+pinpir = 17
 
 # Set GPIO pin as input
 GPIO.setup(pinpir, GPIO.IN)
@@ -51,7 +51,6 @@ try:
 		if currentstate == 1 and previousstate == 0:
 		
 			print("Motion detected!")
-            
 			
 			# Your IFTTT URL with event name, key and json parameters (values)
 			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
