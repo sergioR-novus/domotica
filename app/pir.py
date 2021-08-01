@@ -27,6 +27,8 @@ try:
 	# Loop until PIR output is 0
 	while GPIO.input(pinpir) == 1:
                 print(GPIO.input(pinpir))
+                time.sleep(1)
+
 
 		currentstate = 0
 
