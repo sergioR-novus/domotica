@@ -15,23 +15,6 @@ METRIC_UNITS = True
 
 streamer = Streamer(bucket_name=BUCKET_NAME, bucket_key=BUCKET_KEY, access_key=ACCESS_KEY)
 
-# while True:
-
-#         try:
-#             temp_c = sensor.get_temperature()
-#             print("The temperature is %s celsius" % temp_c)
-        
-
-#         if METRIC_UNITS:
-#             streamer.log(SENSOR_LOCATION_NAME + " Temperature(C)", temp_c)
-
-#         else:
-#             temp_f = format(temp_c * 9.0 / 5.0 + 32.0, ".2f")
-#             streamer.log(SENSOR_LOCATION_NAME + " Temperature(F)", temp_f)
-
-#         streamer.flush()
-#         time.sleep(60*MINUTES_BETWEEN_READS)
-
 
 while True:
         try:
@@ -42,6 +25,7 @@ while True:
                 
         if METRIC_UNITS:
                 streamer.log(SENSOR_LOCATION_NAME + " Temperature(C)", temp_c)
+                print(temp_c)
         else:
                 temp_f = format(temp_c * 9.0 / 5.0 + 32.0, ".2f")
                 streamer.log(SENSOR_LOCATION_NAME + " Temperature(F)", temp_f)
