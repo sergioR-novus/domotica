@@ -6,8 +6,8 @@ sensor = W1ThermSensor()
 
 # --------- User Settings ---------
 SENSOR_LOCATION_NAME = "Casa"
-BUCKET_NAME = ":partly_sunny: Room Temperatures"
-BUCKET_KEY = "dht22sensor"
+BUCKET_NAME = ":partly_sunny: Room stats"
+BUCKET_KEY = "temp"
 ACCESS_KEY = "ist_ENpoPBXw1ubY9eAaNld52lkMMLpjKAgS"
 MINUTES_BETWEEN_READS = .05
 METRIC_UNITS = True
