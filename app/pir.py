@@ -53,7 +53,7 @@ try:
 			
 			#Wait 120 seconds before looping again
 			print("Waiting 120 seconds")
-			time.sleep(120)
+			time.sleep(10)
 			
 		# If the PIR has returned to ready state
 		elif currentstate == 0 and previousstate == 1:
