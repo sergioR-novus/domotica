@@ -64,12 +64,12 @@ try:
                     time.sleep(10)
 		# If the PIR has returned to ready state
 		elif currentstate == 0 and previousstate == 1:
-			print("Ready")
-			previousstate = 0
-		# Wait for 10 milliseconds
-		time.sleep(0.01)
-        streamer.flush()
-        time.sleep(60*MINUTES_BETWEEN_READS)
+                    print("Ready")
+                    previousstate = 0
+                # Wait for 10 milliseconds
+                    time.sleep(0.01)
+                    streamer.flush()
+                    time.sleep(60*MINUTES_BETWEEN_READS)
 except KeyboardInterrupt:
 	print("    Quit")
 	# Reset GPIO settings
