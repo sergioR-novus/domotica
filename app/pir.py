@@ -6,8 +6,7 @@ import time
 import requests
 
 
-current_time = time.strftime("%H:%M:%S", time.localtime())
-print(current_time)
+print(time.strftime("%H:%M:%S", time.localtime()))
 
 
 # Set the GPIO naming convention
