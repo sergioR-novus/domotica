@@ -7,9 +7,9 @@ while True:
     i=GPIO.input(17)
     print(i)
     time.sleep(1)
-if i==0:                 #When output from motion sensor is LOW
-    print "No intruders",i
-    time.sleep(0.1)
-elif i==1:               #When output from motion sensor is HIGH
-    print "Intruder detected",i
-    time.sleep(0.1)
+    if i==0:                 #When output from motion sensor is LOW
+        print "No intruders",i
+        time.sleep(0.1)
+    elif i==1:               #When output from motion sensor is HIGH
+        print "Intruder detected",i
+        time.sleep(0.1)
