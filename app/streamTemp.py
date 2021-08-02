@@ -44,7 +44,7 @@ while True:
                 if currentstate == 1 and previousstate == 0:
                         streamer.log(SENSOR_LOCATION_NAME + " Movimiento", True)
                         print("Motion detected!")
-                        r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
+                        #r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
                         previousstate = 1
                         print("Waiting 10 seconds")
                         time.sleep(10)
