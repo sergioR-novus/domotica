@@ -56,13 +56,13 @@ while True:
                 time.sleep(60*MINUTES_BETWEEN_READS)
 
    
-        except KeyboardInterrupt:
-                print("KeyboardInterrupt")
-                print("    Quit")
-	        # GPIO.cleanup()
+        # except KeyboardInterrupt:
+        #         print("KeyboardInterrupt")
+        #         print("    Quit")
+	#         # GPIO.cleanup()
 
-        # except RuntimeError:
-        #         print("RuntimeError, trying again...")
-        #         # GPIO.cleanup()
-        #         continue
+        # # except RuntimeError:
+        # #         print("RuntimeError, trying again...")
+        # #         # GPIO.cleanup()
+        # #         continue
                 
