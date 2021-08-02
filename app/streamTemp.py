@@ -34,7 +34,7 @@ while True:
                 print("Waiting for PIR to settle ...")
                 while GPIO.input(pinpir) == 1:
                         currentstate = 0
-                        #print(GPIO.input(pinpir))
+                        print(GPIO.input(pinpir))
                         time.sleep(.5)
                 print("    Ready")
                 
