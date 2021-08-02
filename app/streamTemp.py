@@ -61,8 +61,8 @@ while True:
         #         print("    Quit")
 	#         # GPIO.cleanup()
 
-        # # except RuntimeError:
-        # #         print("RuntimeError, trying again...")
-        # #         # GPIO.cleanup()
-        # #         continue
+        except RuntimeError:
+                print("RuntimeError, trying again...")
+                # GPIO.cleanup()
+                continue
                 
