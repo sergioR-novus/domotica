@@ -30,7 +30,7 @@ while True:
                 temp_c = sensor.get_temperature()
                 streamer.log(SENSOR_LOCATION_NAME + " Temperature(C)", temp_c)
                 streamer.log(SENSOR_LOCATION_NAME + " Movimiento", False)
-                print("Temperatura: ", temp_c)  
+                print("Temperatura:", temp_c)  
                 # print("Waiting for PIR to settle ...")
                 # while GPIO.input(pinpir) == 1:
                 #         currentstate = 0
@@ -39,11 +39,11 @@ while True:
                 # print("    Ready")
                 
                 currentstate = GPIO.input(pinpir)
-                print(bool(currentstate))
+                print("Movimiento:",bool(currentstate))
 
                 if currentstate == 1 and previousstate == 0:
                         streamer.log(SENSOR_LOCATION_NAME + " Movimiento", True)
-                        print("Movimiento: ",bool(currentstate))
+                        print("Movimiento:",bool(currentstate))
                         previousstate = 1
                         #r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/LN2n2aZaCLhO6u2IygYbV', params={"value1":"none","value2":"none","value3":"none"})
                         # print("Waiting 10 seconds")
