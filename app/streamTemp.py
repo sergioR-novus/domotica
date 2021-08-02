@@ -31,12 +31,12 @@ while True:
                 streamer.log(SENSOR_LOCATION_NAME + " Temperature(C)", temp_c)
                 streamer.log(SENSOR_LOCATION_NAME + " Movimiento", False)
                 print(temp_c)  
-                print("Waiting for PIR to settle ...")
-                while GPIO.input(pinpir) == 1:
-                        currentstate = 0
-                        print(GPIO.input(pinpir))
-                        time.sleep(.5)
-                print("    Ready")
+                # print("Waiting for PIR to settle ...")
+                # while GPIO.input(pinpir) == 1:
+                #         currentstate = 0
+                #         print(GPIO.input(pinpir))
+                #         time.sleep(.5)
+                # print("    Ready")
                 
                 currentstate = GPIO.input(pinpir)
                 print(currentstate)
