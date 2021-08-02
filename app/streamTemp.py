@@ -34,12 +34,12 @@ while True:
                 print("Waiting for PIR to settle ...")
                 while GPIO.input(pinpir) == 1:
                         currentstate = 0
-                        print(GPIO.input(pinpir))
+                        #print(GPIO.input(pinpir))
                         time.sleep(.5)
                 print("    Ready")
                 
                 currentstate = GPIO.input(pinpir)
-                print("estado: " + currentstate)
+                print(currentstate)
 
                 if currentstate == 1 and previousstate == 0:
                         streamer.log(SENSOR_LOCATION_NAME + " Movimiento", True)
