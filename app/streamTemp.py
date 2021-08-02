@@ -39,7 +39,7 @@ while True:
                 # print("    Ready")
                 
                 currentstate = GPIO.input(pinpir)
-                print(currentstate)
+                print(bool(currentstate))
 
                 if currentstate == 1 and previousstate == 0:
                         streamer.log(SENSOR_LOCATION_NAME + " Movimiento", True)
